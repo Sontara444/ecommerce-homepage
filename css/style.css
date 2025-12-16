@@ -9,6 +9,13 @@ body {
     font-family: var(--font-primary);
     background-color: #fff;
     color: #333;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* ================================
@@ -173,7 +180,7 @@ body {
     display: flex;
     width: 100%;
     height: calc(100vh - 180px);
-    min-height: 550px;
+    min-height: 1050px;
 }
 
 .hero-left,
@@ -246,7 +253,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     padding: 25px 0;
     background-color: #FFFBF8;
 }
@@ -254,7 +261,7 @@ body {
 .feature-item {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 .feature-text {
@@ -274,7 +281,7 @@ body {
    6. BESTSELLER SECTION
    ================================ */
 .bestseller {
-    padding: 60px;
+    padding: 70px 60px;
     background: #FFFBF8;
 }
 
@@ -283,7 +290,9 @@ body {
     font-family: var(--font-logo);
     color: #1a1a1a;
     margin-bottom: 22px;
-    font-weight: 800;
+    font-weight: 900;
+    letter-spacing: -1px;
+    word-spacing: -8px;
 }
 
 .bestseller h2 em {
@@ -323,11 +332,9 @@ body {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
     margin-top: 60px;
     margin-bottom: 50px;
     width: 100%;
-    /* padding: 0 20px; */
 }
 
 .product-card {
@@ -338,7 +345,7 @@ body {
 .product-image {
     width: 100%;
     aspect-ratio: 1;
-    /* background-color: #FFFBF8; */
+    background-color: #FFFFFF;
     margin-bottom: 25px;
     overflow: hidden;
     display: flex;
@@ -413,14 +420,19 @@ body {
 .shop-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background-color: #214B49;
     color: #fff;
-    padding: 18px 40px;
+    padding: 20px 42px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
     transition: background-color 0.3s ease;
+}
+
+.shop-btn svg {
+    width: 26px;
+    height: 26px;
 }
 
 .shop-btn:hover {
@@ -431,18 +443,19 @@ body {
    7. RECENTLY VIEWED SECTION
    ================================ */
 .recently-viewed {
-    padding: 60px 40px;
+    padding: 80px 40px 40px;
     background-color: #EFDBD0;
-    /* Warm beige matching image */
     text-align: left;
 }
 
 .recently-viewed h2 {
-    font-size: 42px;
+    font-size: 66px;
     font-family: var(--font-logo);
     color: #1a1a1a;
-    margin-bottom: 30px;
-    font-weight: 600;
+    margin-bottom: 60px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    word-spacing: -8px;
 }
 
 .recent-grid {
@@ -457,6 +470,95 @@ body {
     padding: 0;
 }
 
+.recently-viewed .product-image {
+    background-color: #FFFFFF;
+}
+
+/* ================================
+   7b. SPLIT BANNER SECTION
+   ================================ */
+.split-banner {
+    display: flex;
+    gap: 10px;
+    padding: 80px 0px;
+    background-color: #fff;
+
+}
+
+.banner-item {
+    flex: 1;
+    height: 840px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.banner-item:hover img {
+    transform: scale(1.05);
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    color: #fff;
+    z-index: 2;
+    text-align: left;
+}
+
+/* Darken overlay for better text readability if needed */
+.banner-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    z-index: 1;
+}
+
+.banner-content h2 {
+    font-size: 60px;
+    font-family: var(--font-logo);
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.banner-content h2 em {
+    font-style: italic;
+    font-family: var(--font-logo);
+}
+
+.banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(50, 50, 50, 0.9);
+    color: #fff;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.banner-btn.white {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+.banner-btn:hover {
+    background-color: #214B49;
+    color: #fff;
+}
+
 /* ================================
    8. GIFT NOTES SECTION
    ================================ */
@@ -467,7 +569,7 @@ body {
 }
 
 .gift-section h2 {
-    font-size: 60px;
+    font-size: 66px;
     font-family: var(--font-logo);
     color: #1a1a1a;
     margin-bottom: 60px;
@@ -523,18 +625,617 @@ body {
 }
 
 .shop-under-btn {
-    border: 1px solid #214B49;
+    border: 2px solid #214B49;
     background: transparent;
     color: #214B49;
-    padding: 12px 20px;
-    font-size: 16px;
+    padding: 22px 20px;
+    font-size: 24px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+
     width: 100%;
+    max-width: 70%;
+
+    display: block;
+    margin: 0 auto;
+    /* ✅ center */
+    text-align: center;
 }
+
 
 .shop-under-btn:hover {
     background-color: #214B49;
     color: #fff;
+}
+
+/* ================================
+   7c. COLLECTIONS SECTION
+   ================================ */
+.collections-section {
+    padding: 60px 0px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.collections-section h2 {
+    font-size: 66px;
+    font-family: var(--font-logo);
+    color: #1a1a1a;
+    margin-bottom: 50px;
+    font-weight: 900;
+}
+
+.collections-section h2 em {
+    font-style: italic;
+    font-family: var(--font-logo);
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.collection-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.collection-item img {
+    width: 100%;
+    aspect-ratio: 0.85;
+    object-fit: cover;
+    display: block;
+}
+
+.collection-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-family: var(--font-primary);
+}
+
+/* ================================
+   7d. GIFT MOMENTS SECTION
+   ================================ */
+.gift-moments {
+    padding: 80px 40px;
+    background-color: #EFDBD0;
+    text-align: center;
+}
+
+.gift-moments h2 {
+    font-size: 66px;
+    font-family: var(--font-logo);
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.gift-moments h2 em {
+    font-style: italic;
+    font-family: var(--font-logo);
+}
+
+.section-subtitle {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.moments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 60px;
+}
+
+.moment-card {
+    text-align: left;
+}
+
+.moment-image {
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.moment-image img {
+    width: 100%;
+    height: 600px;
+    /* Increased height as requested */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.moment-card:hover .moment-image img {
+    transform: scale(1.05);
+}
+
+.moment-card h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+}
+
+.moment-card p {
+    font-size: 22px;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.moment-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #214B49;
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.moment-btn:hover {
+    background-color: #1a353f;
+}
+
+.moments-action {
+    display: flex;
+    justify-content: center;
+}
+
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #214B49;
+    color: #fff;
+    padding: 22px 40px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* ================================
+   7e. ETHOS SECTION
+   ================================ */
+.ethos-section {
+    background-color: #fffcf9;
+    padding: 0;
+}
+
+.ethos-container {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+}
+
+.ethos-image {
+    width: 50%;
+    height: 1080px;
+}
+
+.ethos-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 80px 0px 132px 70px;
+}
+
+.ethos-content {
+    width: 50%;
+    padding: 60px 80px;
+    text-align: left;
+}
+
+.ethos-content .eyebrow {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    margin-bottom: 20px;
+    display: block;
+    font-weight: 600;
+}
+
+.ethos-content h2 {
+    font-size: 76px;
+    font-family: var(--font-logo);
+    color: #1a1a1a;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+.ethos-content h2 em {
+    font-style: italic;
+    font-family: var(--font-logo);
+}
+
+.ethos-content p {
+    font-size: 26px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 90%;
+    font-weight: 500;
+}
+
+.ethos-content .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #214B49;
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.ethos-content .primary-btn:hover {
+    background-color: #1a3c3a;
+}
+
+/* ================================
+   7f. FUTURE SECTION
+   ================================ */
+/* ================================
+   7f. FUTURE SECTION
+   ================================ */
+.future-section {
+    background-color: #fdf2e9;
+    /* Verified beige from reference */
+    padding: 0;
+}
+
+.future-container {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+}
+
+.future-image {
+    width: 45%;
+    height: 700px;
+}
+
+.future-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    filter: brightness(1.3) contrast(1.2);
+}
+
+.future-content {
+    width: 55%;
+    padding: 86px 100px;
+    text-align: left;
+}
+
+.future-content h2 {
+    font-size: 66px;
+    font-family: var(--font-logo);
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: -4px;
+}
+
+.future-content h2 em {
+    font-style: italic;
+    font-family: var(--font-logo);
+}
+
+.future-content .description {
+    font-size: 24px;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 60px;
+    max-width: 90%;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 30px;
+    /* Spacious grid */
+    justify-items: center;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.benefit-icon {
+    color: #214B49;
+    /* Dark green icons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.benefit-icon svg {
+    width: 42px;
+    height: 42px;
+    stroke-width: 1.5;
+}
+
+.icon-circle {
+    border: 1.5px solid #214B49;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #214B49;
+}
+
+.benefit-item span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    font-family: var(--font-primary);
+}
+
+/* ================================
+   7g. REVIEWS SECTION
+   ================================ */
+.reviews-section {
+    padding: 100px 80px;
+    /* Same as Future Section */
+    text-align: center;
+    background-color: #fffcf9;
+}
+
+.reviews-section .section-title {
+    font-size: 66px;
+    font-family: var(--font-logo);
+    color: #1a1a1a;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.reviews-section .section-title em {
+    font-style: italic;
+    font-family: var(--font-logo);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 60px 0;
+}
+
+.review-card {
+    text-align: left;
+}
+
+.review-image {
+    width: 100%;
+    height: 420px;
+    /* Fixed height for consistency */
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.review-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.review-card:hover .review-image img {
+    transform: scale(1.05);
+}
+
+.review-content .stars {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.review-content h3 {
+    font-size: 38px;
+    font-family: var(--font-logo);
+    font-style: italic;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.review-content p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.review-content .author {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    font-size: 22px;
+    color: #000;
+}
+
+.reviews-action {
+    margin-top: 50px;
+}
+
+.dark-btn {
+    background-color: #214B49;
+    color: #fff;
+}
+
+.dark-btn:hover {
+    background-color: #1a3c3a;
+}
+
+.reviews-action .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 122px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.badge-circle {
+    width: 134px;
+    height: 134px;
+    border-radius: 50%;
+    border: 2.8px solid #214B49;
+}
+
+.badge-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* ================================
+   9. FOOTER SECTION
+   ================================ */
+.footer {
+    background-color: #1F4341;
+    /* Dark green background matching reference */
+    padding: 80px 100px 0;
+    color: #fff;
+    font-family: var(--font-primary);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding-bottom: 50px;
+    border-bottom: none;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.brand-column {
+    flex: 1.5;
+    /* Wider brand column */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.footer-logo .logo-text {
+    color: #fff;
+    font-family: var(--font-logo);
+    font-size: 66px;
+    letter-spacing: 2px;
+}
+
+.brand-desc {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    max-width: 90%;
+}
+
+.footer-column h3 {
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 22px;
+    transition: color 0.3s ease;
+    font-weight: 400;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #22716B;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 0.5px;
 }

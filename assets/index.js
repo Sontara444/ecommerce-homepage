@@ -1,55 +1,33 @@
-// IMPORT ONLY FILES THAT EXIST IN assets/images
+// IMAGES AS STRING PATHS
+// Attaching to window to avoid ES Module CORS issues if running locally without a server
 
 // Rings
-import ring01 from "./ring-01.avif";
-import ring02 from "./ring-02.avif";
-import ring03 from "./ring-03.avif";
-import ring04 from "./ring-04.avif";
-import ring05 from "./ring-05.avif";
-import ring06 from "./ring-06.avif";
+const ring01 = "./assets/images/ring-01.avif";
+const ring02 = "./assets/images/ring-02.avif";
+const ring03 = "./assets/images/ring-03.avif";
+const ring04 = "./assets/images/ring-04.avif";
+const ring05 = "./assets/images/ring-05.avif";
+const ring06 = "./assets/images/ring-06.avif";
 
 // Pendants
-import pendant01 from "./pendent-01.avif";
-import pendant02 from "./pendent-02.avif";
-import pendant03 from "./pendent-03.avif";
-import pendant from "./pendent.avif";
+const pendant01 = "./assets/images/pendent-01.avif";
+const pendant02 = "./assets/images/pendent-02.avif";
+const pendant03 = "./assets/images/pendent-03.avif";
+const pendant = "./assets/images/pendent.avif";
 
 // Bracelets & Bangles
-import bracelet01 from "./bracelete-01.avif";
-import bracelet02 from "./bracelete-02.avif";
-import bangle01 from "./bangle-01.avif";
+const bracelet01 = "./assets/images/bracelete-01.avif";
+const bracelet02 = "./assets/images/bracelete-02.avif";
+const bangle01 = "./assets/images/bangle-01.avif";
 
 // Other images
-import productRing from "./product-ring.jpg";
-import leftHero from "./left-hero-image.avif";
-import logoPng from "./logo.png";
-
-// EXPORT ALL IMAGES
-export const images = {
-    ring01,
-    ring02,
-    ring03,
-    ring04,
-    ring05,
-    ring06,
-
-    pendant01,
-    pendant02,
-    pendant03,
-    pendant,
-
-    bracelet01,
-    bracelet02,
-    bangle01,
-
-    productRing,
-    leftHero,
-    logoPng,
-};
+const productRing = "./assets/images/product-ring.jpg";
+const leftHero = "./assets/images/left-hero-img.avif";
+const logoPng = "./assets/images/logo.png";
 
 
-
-export const bestseller = [
+// DATA ARRAYS attached to window
+window.bestseller = [
     {
         id: 1,
         name: "Twisted Petal Gold Bracelet",
@@ -76,7 +54,7 @@ export const bestseller = [
     }
 ];
 
-export const recentlyViewed = [
+window.recentlyViewed = [
     {
         id: 101,
         name: "Twisted Petal Gold Bracelet",
@@ -106,7 +84,7 @@ export const recentlyViewed = [
 ];
 
 
-export const shopByPrice = [
+window.shopByPrice = [
     {
         id: 1,
         title: "Shop Under ₹10000",
@@ -122,70 +100,70 @@ export const shopByPrice = [
     {
         id: 3,
         title: "Shop Under ₹30000",
-        image: ring02,
+        image: ring03,
         link: "/shop?price=30000"
     },
     {
         id: 4,
-        title: "E-Gift Cards",
-        image: ring02,
-        link: "/gift-cards"
+        title: "Shop Under ₹40000",
+        image: ring04,
+        link: "/shop?price=40000"
     }
 ];
 
 
-export const collections = [
+window.collections = [
     {
         id: 201,
         title: "Rings",
-        image: "./assets/images/collection-rings.jpg",
+        image: "./assets/images/ring-01.avif",
         link: "/collections/rings"
     },
     {
         id: 202,
         title: "Earrings",
-        image: "./assets/images/collection-earrings.jpg",
+        image: "./assets/images/ring-02.avif",
         link: "/collections/earrings"
     },
     {
         id: 203,
         title: "Pendants",
-        image: "./assets/images/collection-pendants.jpg",
+        image: "./assets/images/pendent-01.avif",
         link: "/collections/pendants"
     },
     {
         id: 204,
         title: "Bracelets",
-        image: "./assets/images/collection-bracelets.jpg",
+        image: "./assets/images/bracelate-01.avif",
         link: "/collections/bracelets"
     },
     {
         id: 205,
         title: "Necklace",
-        image: "./assets/images/collection-necklace.jpg",
+        image: "./assets/images/pendent-03.avif",
         link: "/collections/necklace"
     },
     {
         id: 206,
         title: "Bangles",
-        image: "./assets/images/collection-bangles.jpg",
+        image: "./assets/images/bangle-01.avif",
         link: "/collections/bangles"
     },
     {
         id: 207,
         title: "Accessories",
-        image: "./assets/images/collection-accessories.jpg",
+        image: "./assets/images/ring-05.avif",
         link: "/collections/accessories"
     }
 ];
 
-export const giftMoments = [
+window.giftMoments = [
     {
         id: 301,
         title: "Birthday",
         description:
             "Celebrate their special day with a timeless piece that shines as bright as they do.",
-        image: "./assets/images/gift-birthday.jpg",
+        image: "./assets/images/pendent-01.avif",
         buttonText: "Shop Birthday Gifts",
         link: "/gifts/birthday"
     },
@@ -194,7 +172,7 @@ export const giftMoments = [
         title: "Anniversary",
         description:
             "Mark your love story with jewellery that symbolizes everlasting connection and devotion.",
-        image: "./assets/images/gift-anniversary.jpg",
+        image: "./assets/images/ring-01.avif",
         buttonText: "Shop Anniversary Gifts",
         link: "/gifts/anniversary"
     },
@@ -203,16 +181,16 @@ export const giftMoments = [
         title: "Engagement",
         description:
             "Begin forever with a piece that captures the promise of your beautiful journey ahead.",
-        image: "./assets/images/gift-engagement.jpg",
+        image: "./assets/images/ring-05.avif",
         buttonText: "Shop Engagement Gifts",
         link: "/gifts/engagement"
     }
 ];
 
-export const reviews = [
+window.reviews = [
     {
         id: 401,
-        image: "./assets/images/review-1.jpg",
+        image: "./assets/images/ring-01.avif",
         rating: 5,
         title: "So pretty!",
         text:
@@ -221,7 +199,7 @@ export const reviews = [
     },
     {
         id: 402,
-        image: "./assets/images/review-2.jpg",
+        image: "./assets/images/ring-02.avif",
         rating: 5,
         title: "So pretty!",
         text:
@@ -230,7 +208,7 @@ export const reviews = [
     },
     {
         id: 403,
-        image: "./assets/images/review-3.jpg",
+        image: "./assets/images/pendent-01.avif",
         rating: 5,
         title: "So pretty!",
         text:
@@ -239,7 +217,7 @@ export const reviews = [
     },
     {
         id: 404,
-        image: "./assets/images/review-4.jpg",
+        image: "./assets/images/bracelate-01.avif",
         rating: 5,
         title: "So pretty!",
         text:
@@ -248,18 +226,24 @@ export const reviews = [
     }
 ];
 
-export const features = [
+window.features = [
     {
         id: 501,
-        text: "aliquam nunc pellentesque urna."
+        icon: `<svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275Z"/></svg>`,
+        text: "Anti - Fade Polish"
     },
     {
         id: 502,
-        text: "aliquam nunc pellentesque urna."
+        icon: `<svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275Z"/></svg>`,
+        text: "Timeless Design"
     },
     {
         id: 503,
-        text: "aliquam nunc pellentesque urna."
+        icon: `<svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275Z"/></svg>`,
+        text: "Lightweight Comfort"
+    },
+    {
+        id: 504,
+        text: "Modern Minimal"
     }
 ];
-
