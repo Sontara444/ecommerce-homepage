@@ -1,0 +1,21 @@
+/* ================================
+   FONTS - Google Fonts Import
+   ================================ */
+
+/* Preconnect hints for faster font loading */
+/* Note: These are already in index.html */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+/* Font Variables */
+:root {
+    --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-logo: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* 
+   FONT USAGE:
+   - Logo/Headings: var(--font-logo) - Cormorant Garamond (elegant serif)
+   - Body/Navigation: var(--font-primary) - Inter (clean sans-serif)
+*/
