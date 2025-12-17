@@ -50,6 +50,7 @@ html {
     display: flex;
     align-items: center;
     text-decoration: none;
+    display: none;
 }
 
 /* ================================
@@ -1238,4 +1239,62 @@ html {
     font-size: 22px;
     color: #fff;
     letter-spacing: 0.5px;
+}
+
+/* ================================
+   Mobile Category Nav (Hidden on Desktop)
+   ================================ */
+.mobile-category-nav {
+    display: none;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-pills-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.mobile-pills-container::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-pill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 5px 15px 5px 5px;
+    min-width: max-content;
+    cursor: pointer;
+}
+
+.mobile-pill-item .img-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.mobile-pill-item .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-pill-item span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    font-family: var(--font-primary);
 }
