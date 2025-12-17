@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +17,7 @@ html {
     width: 100%;
 }
 
-/* ================================
-   1. ANNOUNCEMENT BAR
-   ================================ */
+
 .announcement-bar {
     width: 100%;
     background-color: #214B49;
@@ -53,9 +50,7 @@ html {
     display: none;
 }
 
-/* ================================
-   2. HEADER
-   ================================ */
+
 .header {
     display: flex;
     align-items: center;
@@ -64,7 +59,7 @@ html {
     background-color: #FFFBF8;
 }
 
-/* Header Left - Search Bar */
+
 .header-left {
     flex: 1;
 }
@@ -101,7 +96,7 @@ html {
     align-items: center;
 }
 
-/* Header Center - Logo */
+
 .header-center {
     flex: 1;
     display: flex;
@@ -129,7 +124,7 @@ html {
     color: #333;
 }
 
-/* Header Right - Icons */
+
 .header-right {
     flex: 1;
     display: flex;
@@ -149,9 +144,7 @@ html {
     align-items: center;
 }
 
-/* ================================
-   3. NAVIGATION MENU
-   ================================ */
+
 .nav-menu {
     background-color: #EFDBD0;
     padding: 15px 40px;
@@ -174,9 +167,7 @@ html {
     letter-spacing: 0.3px;
 }
 
-/* ================================
-   4. HERO SECTION
-   ================================ */
+
 .hero {
     display: flex;
     width: 100%;
@@ -247,9 +238,7 @@ html {
     color: #214B49;
 }
 
-/* ================================
-   5. FEATURES BANNER
-   ================================ */
+
 .features-banner {
     display: flex;
     justify-content: center;
@@ -278,9 +267,7 @@ html {
     color: #000;
 }
 
-/* ================================
-   6. BESTSELLER SECTION
-   ================================ */
+
 .bestseller {
     padding: 70px 60px;
     background: #FFFBF8;
@@ -412,7 +399,7 @@ html {
     background-color: #C0C0C0;
 }
 
-/* Bestseller Action Button */
+
 .bestseller-action {
     margin-top: 40px;
     text-align: center;
@@ -440,9 +427,7 @@ html {
     background-color: #1a3c3a;
 }
 
-/* ================================
-   7. RECENTLY VIEWED SECTION
-   ================================ */
+
 .recently-viewed {
     padding: 80px 40px 40px;
     background-color: #EFDBD0;
@@ -466,7 +451,7 @@ html {
     width: 100%;
 }
 
-/* Reuse product card styles but ensure white background for image */
+
 .recent-grid .product-card {
     padding: 0;
 }
@@ -475,9 +460,7 @@ html {
     background-color: #FFFFFF;
 }
 
-/* ================================
-   7b. SPLIT BANNER SECTION
-   ================================ */
+
 .split-banner {
     display: flex;
     gap: 10px;
@@ -513,7 +496,7 @@ html {
     text-align: left;
 }
 
-/* Darken overlay for better text readability if needed */
+
 .banner-item::after {
     content: "";
     position: absolute;
@@ -560,9 +543,7 @@ html {
     color: #fff;
 }
 
-/* ================================
-   8. GIFT NOTES SECTION
-   ================================ */
+
 .gift-section {
     padding: 80px 40px;
     background-color: #fff;
@@ -593,7 +574,7 @@ html {
 .gift-left {
     width: 50%;
     position: relative;
-    /* Base for absolute image */
+
     overflow: hidden;
 }
 
@@ -640,7 +621,7 @@ html {
 
     display: block;
     margin: 0 auto;
-    /* ✅ center */
+
     text-align: center;
 }
 
@@ -650,9 +631,7 @@ html {
     color: #fff;
 }
 
-/* ================================
-   7c. COLLECTIONS SECTION
-   ================================ */
+
 .collections-section {
     padding: 60px 0px;
     background-color: #fff;
@@ -702,9 +681,7 @@ html {
     font-family: var(--font-primary);
 }
 
-/* ================================
-   7d. GIFT MOMENTS SECTION
-   ================================ */
+
 .gift-moments {
     padding: 80px 40px;
     background-color: #EFDBD0;
@@ -750,7 +727,7 @@ html {
 .moment-image img {
     width: 100%;
     height: 600px;
-    /* Increased height as requested */
+
     object-fit: cover;
     transition: transform 0.5s ease;
 }
@@ -897,15 +874,10 @@ html {
     background-color: #1a3c3a;
 }
 
-/* ================================
-   7f. FUTURE SECTION
-   ================================ */
-/* ================================
-   7f. FUTURE SECTION
-   ================================ */
+
 .future-section {
     background-color: #fdf2e9;
-    /* Verified beige from reference */
+
     padding: 0;
 }
 
@@ -961,7 +933,7 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 30px;
-    /* Spacious grid */
+
     justify-items: center;
 }
 
@@ -975,7 +947,7 @@ html {
 
 .benefit-icon {
     color: #214B49;
-    /* Dark green icons */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1010,12 +982,10 @@ html {
     font-family: var(--font-primary);
 }
 
-/* ================================
-   7g. REVIEWS SECTION
-   ================================ */
+
 .reviews-section {
     padding: 100px 80px;
-    /* Same as Future Section */
+
     text-align: center;
     background-color: #fffcf9;
 }
@@ -1047,7 +1017,7 @@ html {
 .review-image {
     width: 100%;
     height: 420px;
-    /* Fixed height for consistency */
+
     overflow: hidden;
     margin-bottom: 25px;
 }
@@ -1147,12 +1117,10 @@ html {
     line-height: 1.4;
 }
 
-/* ================================
-   9. FOOTER SECTION
-   ================================ */
+
 .footer {
     background-color: #1F4341;
-    /* Dark green background matching reference */
+
     padding: 80px 100px 0;
     color: #fff;
     font-family: var(--font-primary);
@@ -1172,7 +1140,7 @@ html {
 
 .brand-column {
     flex: 1.5;
-    /* Wider brand column */
+
 }
 
 .footer-logo {
@@ -1241,9 +1209,7 @@ html {
     letter-spacing: 0.5px;
 }
 
-/* ================================
-   Mobile Category Nav (Hidden on Desktop)
-   ================================ */
+
 .mobile-category-nav {
     display: none;
     padding: 15px 20px;
@@ -1258,9 +1224,7 @@ html {
     gap: 15px;
     padding: 10px 0;
     scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE/Edge */
+
 }
 
 .mobile-pills-container::-webkit-scrollbar {
@@ -1297,4 +1261,29 @@ html {
     font-weight: 500;
     color: #333;
     font-family: var(--font-primary);
+}
+
+
+.explore-collection {
+    display: none;
+}
+
+
+.gift-grid {
+    display: none;
+}
+
+
+.celebrate-section {
+    display: none;
+}
+
+
+.category-quick-links {
+    display: none;
+}
+
+
+.gallery-section {
+    display: none;
 }
